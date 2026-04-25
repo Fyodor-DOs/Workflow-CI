@@ -1,4 +1,4 @@
-name: Wine_Classification_Project
+name: Titanic_Survival_Project
 
 conda_env: conda.yaml
 
