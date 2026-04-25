@@ -1,0 +1,10 @@
+digest: 274df4a4
+name: dataset
+profile: '{"num_rows": 119, "num_elements": 476}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "sepal length (cm)", "required":
+  true}, {"type": "double", "name": "sepal width (cm)", "required": true}, {"type":
+  "double", "name": "petal length (cm)", "required": true}, {"type": "double", "name":
+  "petal width (cm)", "required": true}]}'
+source: '{"tags": {"mlflow.user": "ASUS ROG STRIX", "mlflow.source.name": "modelling.py",
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "d57bdd6bc55a1d4aaca05b2e94095723d0fbce7b"}}'
+source_type: code
