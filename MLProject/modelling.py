@@ -2,8 +2,8 @@
 Modelling script untuk MLflow Project (Kriteria 3).
 Dijalankan via: mlflow run MLProject --env-manager=local
 
-Script ini melatih RandomForestClassifier dengan MLflow autolog.
-Dataset harus berada di folder yang sama (iris_preprocessed.csv).
+Dataset: Wine Recognition (3 kelas, 13 fitur)
+Model: RandomForestClassifier + MLflow autolog
 """
 
 import os
@@ -17,13 +17,13 @@ import mlflow.sklearn
 
 def main():
     # Load preprocessed dataset (relative to MLProject folder)
-    data_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "iris_preprocessed.csv")
+    data_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "wine_preprocessed.csv")
     df = pd.read_csv(data_path)
     print(f"Dataset loaded: {df.shape}")
 
     # Pisahkan fitur dan target
-    X = df.drop(columns=['species_encoded'])
-    y = df['species_encoded']
+    X = df.drop(columns=['target'])
+    y = df['target']
 
     # Train-test split
     X_train, X_test, y_train, y_test = train_test_split(
